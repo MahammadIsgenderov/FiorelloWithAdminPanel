@@ -1,0 +1,28 @@
+﻿@model Category
+
+
+<div class="col-12">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Category Update </h5>
+            <small class="text-muted float-end">Default label</small>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Name">Name</label>
+                    <input asp-for="Name" class="form-control">
+                    <span asp-validation-for="Name" class="text-danger">Name is Required.</span>
+                </div>
+
+
+                <button type="submit" class="btn btn-success">Submit</button>
+                <a asp-action="Index" type="submit" class="btn btn-primary">Go Back</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+}
